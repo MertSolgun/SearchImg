@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap");
+
+body {
+  background-color: #e5e5f7;
+  opacity: 1;
+  background-image: radial-gradient(#5fb019 2px, #e5e5f7 2px);
+  background-size: 40px 40px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+input {
+  outline: none;
+  font-family: "JetBrains Mono", monospace;
+  padding: 10px;
+  width: 350px;
+  background-color: aquamarine;
+  text-align: center;
+  border-radius: 10px solid black;
+  border-bottom: 9px solid black;
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin: 90px auto !important;
+  justify-content: center;
+  margin: auto;
+  column-gap: 10px;
+  row-gap: 20px;
+}
+.img-container img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.img-container img:hover {
+  border: 2px solid lightblue;
+  transition: all ease-in-out 0.3s;
+}
+
+@media (max-width: 1000px) {
+  .img-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin: 90px auto !important;
+    justify-content: center;
+    margin: auto;
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .img-container {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    margin: 90px auto !important;
+    justify-content: center;
+    margin: auto;
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+  .img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  input {
+    margin-top: 30px;
+  }
+}
